@@ -23,9 +23,9 @@ void bisection(double(*f)(double), double a, double b, int n){
 }
 
 int main(){
-    int max_iter = 50;
-    double a=-5;
-    double b=10;
+    int max_iter = 10;
+    double a=0.9350343792996559;
+    double b=2.7126212261731646;
 
     double f (double x){
         return (x*x*x -2.0);
@@ -36,5 +36,5 @@ int main(){
     }
 
     //bisection(f, a, b, max_iter);
-    bisection(population, a, b, max_iter);
+    bisection(f, a, b, max_iter);
 }
