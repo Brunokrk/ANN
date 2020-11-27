@@ -24,12 +24,13 @@ void bisection(double(*f)(double), double a, double b, int n){
 
 int main(){
     int max_iter = 10;
-    double a=0.9350343792996559;
-    double b=2.7126212261731646;
+    double a=-0.98881;
+    double b=3.04895;
 
     double f (double x){
-        return (x*x*x -2.0);
+        return (x*x*x*x - 2*x*x*x - 3*x*x +3*x + 2);
     }
+
 
     double population(double lambda){
         return 1000000*exp(lambda)+ (537142 /lambda) *(exp(lambda) - 1) -1863961;

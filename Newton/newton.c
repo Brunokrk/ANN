@@ -26,15 +26,15 @@ void secant(double(*f)(double),  double x0, double x1, int n){
     }
 }
 int main(){
-    double x0 = 3;
-    int max_iter = 50;
+    double x0 = 1.08915;
+    int max_iter = 4;
 
     double f(double x){
-        return x*x*x - 2;
+        return (sqrt(x) - cos(x));
     }
 
     double df(double x){
-        return 3*x*x;
+        return ((1/(2*sqrt(x))+sin(x)));
     }
 
     double f2(double x){
@@ -47,6 +47,7 @@ int main(){
 
    //newton(f2, df2, x0, max_iter);
 
-   double x1 = 2;
-   secant(f, x0, x1, max_iter);
+   //double x1 = 2;
+   //secant(f, x0, x1, max_iter);
+   newton(f,df,x0, max_iter);
 }
