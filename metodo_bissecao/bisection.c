@@ -47,6 +47,10 @@ int main()
         return 1000000 * exp(lambda) + (537142 / lambda) * (exp(lambda) - 1) - 1863961;
     }
 
+    double paraquedista(double){
+
+    }
+
     //bisection(f, a, b, max_iter);
     bisection(f, a, b, max_iter);
 }

@@ -17,12 +17,12 @@ void false_position(double (*f)(double), double a, double b, int n, double tol)
                 printf("Voce encontrou uma raiz para f. Ela é: %.16f\n", c);
                 return;
             }
-            if (fabs(f(c)) < tol)
-            {
+            //if (fabs(f(c)) < tol)
+            //{
                 //não deu exatamente igual ao do profesor
-                printf("O numero %.16f esta perto o suficiente da raiz", c);
-                return;
-            }
+            //    printf("O numero %.16f esta perto o suficiente da raiz", c);
+            //    return;
+            //}
 
             printf("x_%d = %.15f \n", i + 1, c);
             if (fa * f(c) < 0)
@@ -44,19 +44,19 @@ void false_position(double (*f)(double), double a, double b, int n, double tol)
 int main()
 {
 
-    double a = 0;
-    double b = 2;
-    int max_iter = 50;
+    double a =0.26025;
+    double b = 1.16736;
+    int max_iter = 10;
     double tol = 0.00001;
     
     double f(double x)
     {
-        return x * x * x - 2;
+        return pow(x,2) - 4*x +2 -log(x);
     }
 
     double population(double lambda){
         return 1000000*exp(lambda)+ (537142 /lambda) *(exp(lambda) - 1) -1863961;
     }
 
-    false_position(population, a, b, max_iter, tol);
+    false_position(f, a, b, max_iter, tol);
 }
