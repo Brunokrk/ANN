@@ -33,8 +33,8 @@ void bisection(double (*f)(double), double a, double b, int n)
 int main()
 {
     int max_iter = 10;
-    double a = 0;
-    double b = 6;
+    double a = -4.11;
+    double b = -0.25;
 
     double f(double h)
     {
@@ -52,6 +52,10 @@ int main()
     double ex3(double x){
         return sqrt(2*9.81*x)+tanh((sqrt(2*9.81*x)/(2*8.82))*6.75)-8.81;
     }
+
+    double ex10(double w){
+        return -(9.81/2*pow(w,2)) *(sinh(w)-sin(w)) - 2.74;
+    }
     double population(double lambda)
     {
         return 1761421 * exp(lambda) + (456593/lambda) * (exp(lambda) - 1) -4130410;
@@ -61,5 +65,5 @@ int main()
     }
 
     //bisection(f, a, b, max_iter);
-    bisection(ex3, a, b, max_iter);
+    bisection(ex10, a, b, max_iter);
 }
