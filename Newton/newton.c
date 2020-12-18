@@ -32,10 +32,16 @@ void secant(double (*f)(double), double x0, double x1, int n)
 }
 int main()
 {
-    double x0 =1.24826;
-    double x1 =4.07508;
+    double x0 =2.23623;
+    double x1 =2.79955;
     int max_iter = 4;
 
+    double qst2(double x){
+        return pow(x,3) -5;
+    }
+    double dqst2(double x){
+        return 3*pow(x,2);
+    }
     double f(double x)
     {
         return (pow(x,2) -4*x +2 -log(x));
@@ -59,6 +65,6 @@ int main()
     //newton(f2, df2, x0, max_iter);
 
     //double x1 = 2;
-    secant(f, x0, x1, max_iter);
-    //newton(f, df, x0, max_iter);
+    secant(qst2, x0, x1, max_iter);
+    //newton(qst2, dqst2, x0, max_iter);
 }

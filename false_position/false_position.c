@@ -44,10 +44,14 @@ void false_position(double (*f)(double), double a, double b, int n, double tol)
 int main()
 {
 
-    double a =0.26025;
-    double b = 1.16736;
+    double a =0.58402;
+    double b = 2.80806;
     int max_iter = 10;
     double tol = 0.00001;
+    
+    double qst2(double x){
+        return pow(x,3) -5;
+    }
     
     double f(double x)
     {
@@ -58,5 +62,5 @@ int main()
         return 1000000*exp(lambda)+ (537142 /lambda) *(exp(lambda) - 1) -1863961;
     }
 
-    false_position(f, a, b, max_iter, tol);
+    false_position(qst2, a, b, max_iter, tol);
 }

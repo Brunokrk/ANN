@@ -33,9 +33,12 @@ void bisection(double (*f)(double), double a, double b, int n)
 int main()
 {
     int max_iter = 10;
-    double a = -4.11;
-    double b = -0.25;
+    double a = 0.17901;
+    double b = 2.86895;
 
+    double qst1(double x){
+        return pow(x,3) - 5;
+    }
     double f(double h)
     {
         return (3*9.81*3.14159265359*pow(h,2) - 3.14159265359*pow(h,3) - 3*1811.92);
@@ -65,5 +68,5 @@ int main()
     }
 
     //bisection(f, a, b, max_iter);
-    bisection(ex10, a, b, max_iter);
+    bisection(qst1, a, b, max_iter);
 }
