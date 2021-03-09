@@ -1,8 +1,8 @@
 #método das diferenças divididas (de Newton)
 
 #(1,2), (2,5), (3,1), (4,3)
-x = [1, 2, 3, 4]
-y = [2, 5, 1, 3]
+x = [2.014, 4.232, 6.052]
+y = [4.768, 2.516, 2.55]
 
 def divided_differences(x, y):
     Y = [item for item in y] # vai mudando em cada iteração

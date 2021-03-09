@@ -20,8 +20,8 @@ def subs():
     pass
 
 if __name__ == '__main__':
-    x = [1, 2, 3]
-    y = [2, 5, 1]
+    x = [1.502, 1.904, 4.476]
+    y = [4.922, 4.824, 2.36]
     eq = lagrange(x,y)
     print('p(x) = ',eq)
 
