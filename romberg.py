@@ -1,4 +1,4 @@
-import math
+import math 
 def romberg(col1):
     col1 = [item for item in col1]
     n = len(col1)
@@ -20,11 +20,11 @@ def trapz(f, a, b, h):
     return (h / 2) * (f(a) + 2 * soma + f(b))
 
 def f(x):
-    return math.sqrt(1+(math.cos(x))**2)
+    return  math.sin(math.exp(-x**2))+1
 
-a,b= [0.07422, 1.07422]
-h = 0.1
-k=3
+a,b= [0.185, 1.185]
+h = 0.2
+k=6
 hs = [h/2 ** i for i in range(k)]
 col1 = [trapz(f, a, b, hi) for hi in hs]
 print('F_1',col1)
