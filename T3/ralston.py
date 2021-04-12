@@ -16,10 +16,10 @@ def ralston(f, x0, y0, h, n):
 if __name__ == '__main__':
 
     def f(x, y):
-        return y*math.cos(x)+1
+        return y + math.exp(-x**2) + 2
     
-    x0 = 0.40462
-    y0 = 1.97076
+    x0 = 0.6870
+    y0 = 1.72141
 
-    r = ralston(f, x0, y0, h=0.15218, n=10)
+    r = ralston(f, x0, y0, h=0.146, n=10)
     print(r)
