@@ -18,12 +18,12 @@ def euler_half(f, x0, y0, h, n):
 
 if __name__ == "__main__":
     def f(x,y):
-        return y*math.cos(x) + 1
+        return y* + math.exp(-x**2) + 1
     
-    x0 = 0.55797
-    y0 = 1.3086
+    x0 = 0.63649
+    y0 = 1.25347
 
-    r = euler_half(f, x0, y0, h=0.17519, n=10)
+    r = euler_half(f, x0, y0, h=0.12647, n=10)
 
     print(r)
 

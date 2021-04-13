@@ -11,13 +11,13 @@ def euler(f, x0: float, y0: float, h: float, n: int):
         y0 = y
     return xs, ys
 
-x0 = 0.96859
-y0 = 1.91499
-h = 0.18026
+x0 = 1.98313
+y0 = 0.24948
+h = 0.11355
 
 
 def f(x, y):
-    return y*math.cos(x) + 1
+    return y* + math.exp(-x**2) + 2
 
 
 r = euler(f, x0, y0, h, n=10)
